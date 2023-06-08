@@ -78,7 +78,7 @@ console.log(multiplyArray([2, 4, 5]));
 arguments passed to the function when called. 
 */
 
-const numArgs = function (...args){
+const numArgs = function (args){
     return args.length;
 }
 
