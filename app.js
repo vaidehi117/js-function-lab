@@ -46,18 +46,43 @@ function isCharVowel(character) {
 }
 console.log(isCharVowel('e'));
 console.log(isCharVowel('c'));
+
 /* 4. Define a function, as a function expression, sumArray that takes an array of numbers
  and returns the sum of those numbers. For example, sumArray([2, 4, 5]); would return 11.
 */
 
+const sumArray = function (array) {
+    let sum = 0;
+    array.forEach(function(num) {
+        sum += num;
+    });
+    return sum;
+}
+
+console.log(sumArray([2, 4, 5]))
+
 /* 5. Define a function, as a function declaration, multiplyArray that takes an array of numbers and 
 returns the product those numbers. For example, multiplyArray([2, 4, 5]); would return 40.
-
 */
+function multiplyArray(array) {
+    var sum = 1;
+    for (var i = 0; i < array.length; i++) {
+        sum = sum * array[i];
+    }
+    return sum;
+}
+
+console.log(multiplyArray([2, 4, 5])); 
 
 /* 6.Define a function, as a function expression, numArgs that returns the number of 
 arguments passed to the function when called. 
 */
+
+const numArgs = function (...args){
+    return args.length;
+}
+
+console.log(numArgs(2, 4, 5))
 
 /* 7. Define a function, as a function declaration, reverseString that takes a string, 
 reverses the characters, and returns it. For example, reverseString('rockstar');
